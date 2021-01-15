@@ -1,0 +1,15 @@
+package student_olga_vitolina.homework_2.variables;
+// Uzdevums: nodefinet 2 mainigos, savienot un izdrukat
+public class Variables {
+    //ieraksta psvm un enter, lai paraditos (main) String tips
+    // norada divus mainigos, tips String
+    public static void main(String[] args) {
+        String part1 = "Hello";
+        String part2 = "World";
+    //vardu savienosana izmantojot aritmetisko operatoru + (addition)
+        String result = part1 + " " + part2;
+    //uzdevums izvadit (atradit) rezultatu konsole
+        System.out.println(result);
+    // lai izpilditu nospiez uz zalas bultas pie rindas numuriem
+    }
+}
