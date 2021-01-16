@@ -1,0 +1,15 @@
+package student_olga_vitolina.homework_2.variables.perimeter;
+
+public class Perimeter {
+    // ievieto main metodi starp kvadratiekavam uzsarkstot psvm un nospiezot enter
+    public static void main(String[] args) {
+    // uzdevums = aprekinat perimetru, ja dotas cetras malas
+        int mala1 = 10;
+        int mala2 = 10;
+        int mala3 = 25;
+        int mala4 = 25;
+       // resultats, saskaitot malas
+        int sumResult = mala1 + mala2 + mala3 + mala4;
+       System.out.println("Perimetrs: " + sumResult);
+    }
+}
