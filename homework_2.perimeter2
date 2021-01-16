@@ -1,0 +1,29 @@
+package student_olga_vitolina.homework_2.variables.perimeter;
+
+public class Perimeter2 {
+    // main metodi izsauc aiz iekavam uzrakstot psvm un enter
+    public static void main(String[] args) {
+        int mala1 = 20;
+        int mala2 = 20;
+        int mala3 = 1;
+        int mala4 = 9;
+        int result = mala1 + mala2 + mala3 + mala4;
+        System.out.println("Perimeters: " + result);
+
+        // rezultats izmantojot += operaciju, pakapeniski pieskaitot
+        result = mala1;
+        System.out.println(mala1);
+
+        result = result + mala2;
+        System.out.println(mala2 + result);
+
+        result += mala3;
+        System.out.println(mala3 + result);
+
+        result += mala4;
+        System.out.println(mala4 + result);
+
+        System.out.println("Perimetrs: " + result);
+    }
+}
+// sistema rada ka kludu nav, parbaudit nevaru, jo per run nospiesanas, paradas cita studenta darbs....
