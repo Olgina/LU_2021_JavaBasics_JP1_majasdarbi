@@ -1,0 +1,20 @@
+package student_olga_vitolina.homework_2.variables;
+
+public class RollDice {
+    // main metode, nospiezot psvm un enter
+    public static void main(String[] args) {
+// vienlaicigi met divus kaulinus
+// izmanto Math.random metodi: int ... = (int)(Math.random() * range) + min; kur range kaulinam no 1 lidz 6 un minimala vertiba
+
+        int rollTheDice1 = (int)(Math.random() * 6) + 1;
+        int rollTheDice2 = (int)(Math.random() * 6) + 1;
+
+        // abu kaulinu summa
+        int kopa= rollTheDice1 + rollTheDice2;
+
+        // izdruka / atrada atseviski pirma un otra kaulina vertibu un abu summu
+        System.out.println("pirmais kaulins = " + rollTheDice1 + "otrais kaulins = " + rollTheDice2+ "kaulinu summa = " + kopa);
+
+    }
+
+    }
