@@ -13,7 +13,7 @@ public class RollDice {
         int kopa= rollTheDice1 + rollTheDice2;
 
         // izdruka / atrada atseviski pirma un otra kaulina vertibu un abu summu
-        System.out.println("pirmais kaulins = " + rollTheDice1 + "otrais kaulins = " + rollTheDice2+ "kaulinu summa = " + kopa);
+        System.out.println("pirmais kaulins = " + rollTheDice1 + "; otrais kaulins = " + rollTheDice2+ "; kaulinu summa = " + kopa);
 
     }
 
