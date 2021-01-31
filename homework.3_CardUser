@@ -1,0 +1,31 @@
+package student_olga_vitolina.homework_3;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+public class CardUser {
+    // the refference class BankCard
+    // create an object
+    public static void main(String[] args) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyy");
+        BankCard myCard = new BankCard(
+                "SEB Banka",
+                "Maestro",
+                "Olga Vitolina",
+                "0001 5555 0001",
+                sdf.parse ("31/01/2021"),
+                "007");
+
+        // print output (card info) in comand line
+        // output expected before toString method defenition in class BankCard: Kartes info: student_olga_vitolina.homework_3.BankCard@7907ec20
+        // output expected: Kartes info: {SEB Banka Maestro Olga Vitolina 0001 5555 0001 Sun Jan 31 00:00:00 EET 2021 007 0.0}
+        System.out.println("Kartes info: " + myCard);
+
+        myCard.addFunds(8d);
+        System.out.println("Debit: " + myCard);
+        myCard.withDraw(31d);
+        System.out.println("Credit: " + myCard);
+        // TODO kas būtu pēdējiem diviem jāraksta, lai izdrukātos tikai iemaksātais / izņemtais apmērs?
+
+        }
+    }
