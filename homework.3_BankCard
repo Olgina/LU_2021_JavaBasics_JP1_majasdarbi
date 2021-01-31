@@ -1,0 +1,47 @@
+package student_olga_vitolina.homework_3;
+
+import java.util.Date;
+
+public class BankCard {
+    // declare reference variables for class BankCard
+    // private- not everyone can access
+
+    private String bankName;
+    private String cardType;
+    private String nameOnCard;
+    private String cardNumber;
+    private Date expireDate;
+    private String cvv;
+    private double balnce;
+
+    // assign to previously declared variables
+    public BankCard(String bankName, String cardType, String nameOnCard, String cardNumber, Date expireDate, String cvv) {
+        this.bankName = bankName;
+        this.cardType = cardType;
+        this.nameOnCard = nameOnCard;
+        this.cardNumber = cardNumber;
+        this.expireDate = expireDate;
+        this.cvv = cvv;
+        this.balnce = 0d;
+    }
+
+    // set methods
+    public void withDraw(double value) {
+        this.balnce -= value;
+    }
+
+    public void addFunds(double value) {
+        this.balnce += value;
+    }
+
+    // add toString method
+    public String toString() {
+        return "{" + bankName + " " +
+                cardType + " " +
+                nameOnCard + " " +
+                cardNumber + " " +
+                expireDate + " " +
+                cvv + " " +
+                balnce + "}";
+    }
+}
