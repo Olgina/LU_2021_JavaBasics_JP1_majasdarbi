@@ -1,0 +1,16 @@
+package student_olga_vitolina.homework_3;
+
+public class RollDice {
+
+       public static int roll() {
+               return (int)(Math.random() * 6) + 1;
+       }
+    public static void main(String[] args) {
+       int rollTheDice1 = roll();
+       int rollTheDice2= roll();
+       int kopa = rollTheDice1 + rollTheDice2;
+       System.out.println("pirmais kaulins = " + rollTheDice1 + "; otrais kaulins = " + rollTheDice2+ "; kaulinu summa = " + kopa);
+
+       }
+}
+// output expected: pirmais kaulins = 2; otrais kaulins = 6; kaulinu summa = 8
