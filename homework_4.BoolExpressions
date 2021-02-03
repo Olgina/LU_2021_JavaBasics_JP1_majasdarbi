@@ -1,0 +1,37 @@
+package student_olga_vitolina.homework_4;
+
+public class BoolExpressions {
+    // klase satur metodi, tamdēļ main metodi nelieto
+
+    public boolean test1(int i) {
+        return i == 10 || i == 20 || i == 5;
+    }
+
+    public boolean test2(int i) {
+        return i != 10 && i != 20 && i != 30;
+    }
+
+    public String test3(int i) { // test3 = if i divides with 2, output is "Even", if not output "Odd"
+        return i % 2 == 0 ? "Even" : "Odd";
+    }
+
+    public String test4(int i) {
+        if (i <= 10) return "children";
+        else if (i >= 11 && i <= 20) return "teenager";
+        else if (i >= 21 && i <= 30) return "young";
+        else if (i >= 31 && i <= 55) return "adult";
+        else return "senior";
+    }
+
+    public boolean test5(String expression, int length) { // test4 vai teksta rindas garums atbilst skaitlim
+        return expression.length() == length;
+    }
+
+    public boolean test6(String expression, String expressionB) { // test6 vai teksta rindas vienadas
+        return expression.equals(expressionB);
+    }
+
+    public int test7(int i, int ii) { // test 7 atgriezt lielako vērtību
+        return Math.max(i, ii);
+    }
+}
