@@ -1,0 +1,93 @@
+package student_olga_vitolina.homework_4;
+
+public class BoolExpressionsTest {
+    void testOfTest1(){
+        BoolExpressions first = new BoolExpressions();
+        boolean actualResult = first.test1(10);
+        boolean expectedResult = true;
+        check(actualResult,expectedResult,"test1");
+    }
+
+    void testNegativeOfTest1(){
+        BoolExpressions first = new BoolExpressions();
+        boolean actualResult = first.test1(3);
+        boolean expectedResult = true;
+        check(!actualResult,expectedResult,"test1");
+    }
+
+    void testOfTest2(){
+        BoolExpressions second = new BoolExpressions();
+        boolean actualResult = second.test2(10);
+        boolean expectedResult = true;
+        check(actualResult, expectedResult,"test2");
+    }
+
+    void testOfTest3(){
+        BoolExpressions third = new BoolExpressions();
+        String actualResult = third.test3(17);
+        String expectedResult = "Odd";
+        check(actualResult, expectedResult, "test3");
+    }
+
+    void testOfTest4(){
+        BoolExpressions fourth = new BoolExpressions();
+        String actualResult = fourth.test4(54);
+        String expectedResult = "children";
+        check(actualResult, expectedResult, "test4");
+    }
+
+    void testOfTest5(){
+        BoolExpressions fifth = new BoolExpressions();
+        boolean actualResult = fifth.test5("Hello World", 11);
+        boolean expectedResult = true;
+        check(actualResult, expectedResult, "test5");
+    }
+
+    void testOfTest6(){
+        BoolExpressions sixth = new BoolExpressions();
+        boolean actualResult = sixth.test6("Hello World", "Hello World");
+        boolean expectedResult = true;
+        check(actualResult, true, "test6"); // expectedResult is the same as true
+     }
+     void testOfTest7(){
+        BoolExpressions seventh = new BoolExpressions();
+        int actualResult = seventh.test7(77,11);
+        int expectedResult = 77;
+        check(actualResult, expectedResult, "test7");
+     }
+
+        void check(boolean actual, boolean expected, String name){
+        if(actual== expected) System.out.println("Test: "+name+": OKi");
+        else {
+            System.out.println("Actual: "+actual+", Expected: "+expected);
+            System.out.println("Test: "+name+": Ups");
+        }
+    }
+
+        void check(String actual, String expected, String name){
+        if (expected.equals(actual)) System.out.println("Test: "+name+": OKi");
+        else {
+            System.out.println("Actual: "+actual+", Expected: "+expected);
+            System.out.println("Test: "+name+": Ops:(");
+            }
+        }
+
+        void check(int actual, int expected, String name){
+        if(actual==expected) System.out.println("Test: "+name+": OKi");
+        else {
+            System.out.println("Actual: " + actual + ", Expected: " + expected);
+            System.out.println("Test: " + name + ": Math:(");
+        }
+        }
+
+    public static void main(String[] args) {
+        new BoolExpressionsTest().testOfTest1();
+        new BoolExpressionsTest().testNegativeOfTest1();
+        new BoolExpressionsTest().testOfTest2();
+        new BoolExpressionsTest().testOfTest3();
+        new BoolExpressionsTest().testOfTest4();
+        new BoolExpressionsTest().testOfTest5();
+        new BoolExpressionsTest().testOfTest6();
+        new BoolExpressionsTest().testOfTest7();
+    }
+}
