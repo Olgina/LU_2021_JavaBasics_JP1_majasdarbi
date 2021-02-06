@@ -1,0 +1,43 @@
+package student_olga_vitolina.homework_4;
+
+public class RollDice {
+    public static int roll() {
+        return (int) (Math.random() * 6) + 1;
+    }
+
+    public static void main(String[] args) {
+        int rollTheDice1 = roll();
+        int rollTheDice2 = roll();
+        int kopa = rollTheDice1 + rollTheDice2;
+        String c = "Continue";
+        String l = "Lause";
+        String w = "Win";
+
+        while(kopa == 4 || kopa == 5 || kopa ==6 || kopa==8 || kopa == 9 || kopa ==10){
+            kopa = kopa+1;
+        switch (kopa) {
+            case 7:
+            case 11:
+                System.out.println("Game result: Win"); break;
+            case 2:
+            case 3:
+            case 12:
+                System.out.println("Game result: Louse");break;
+            default:
+                System.out.println("Game result: Continue");break;
+        }}
+
+        System.out.println("pirmais kaulins = " + rollTheDice1 + "; otrais kaulins = " + rollTheDice2 + "; rezultats = " + kopa);
+    }
+}
+// expected outcome (example:
+//Game result: Continue
+//Game result: Continue
+//Game result: Win
+//pirmais kaulins = 6; otrais kaulins = 2; rezultats = 11
+
+//result = "Win" || "Louse" || "Continue";
+// ja summa ir 2,3,12 tad ir zaudēts.
+// ja summa ir 7,11 tad ir vinnests.
+// ja summa ir 4,5,6,8,9,10 tad programma automātiski met kauliņu pa jaunu. Process notiek kamēr tiek vinnēts vai zaudēts
+// pēc katra vinnesta vai zaudējuma parādīt cik spēles tika vinnētas vai cik zaudētas.
