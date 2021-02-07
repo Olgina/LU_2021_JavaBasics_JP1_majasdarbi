@@ -1,0 +1,21 @@
+package student_olga_vitolina.homework_4;
+
+public class RollDiceB {
+    
+        public static int roll() {
+            return (int) (Math.random() * 6) + 1;}
+
+    public static void main(String[] args) {
+            int rollTheDice1 = roll();
+            int rollTheDice2 = roll();
+            int kopa = rollTheDice1 + rollTheDice2;
+            String c = "Continue";
+            String l = "Lause";
+            String w = "Win";
+            
+            if (kopa==2 || kopa==3 || kopa==12) System.out.println("Game result: Louse");
+            else if (kopa == 4 || kopa == 5 || kopa ==6 || kopa==8 || kopa == 9 || kopa ==10) System.out.println("Continue");
+            else System.out.println("Game result: Win");
+            
+            System.out.println("pirmais kaulins = " + rollTheDice1 + "; otrais kaulins = " + rollTheDice2 + "; rezultats = " + kopa);
+        }}
