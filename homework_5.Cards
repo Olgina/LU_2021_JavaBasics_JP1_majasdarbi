@@ -1,0 +1,108 @@
+package student_olga_vitolina.homework_5;
+
+public class Cards implements Comparable<Cards> {
+
+    // spēļu kārts modelis ar diviem parametriem: skaits (13) un zīmējums (4), bez džokera
+
+    private int theValue;
+    private int theSuit;
+
+    public final static int duzis = 1;
+    public final static int k2 = 2;
+    public final static int k3 = 3;
+    public final static int k4 = 4;
+    public final static int k5 = 5;
+    public final static int k6 = 6;
+    public final static int k7 = 7;
+    public final static int k8 = 8;
+    public final static int k9 = 9;
+    public final static int k10 = 10;
+    public final static int kalps = 11;
+    public final static int dama = 12;
+    public final static int karalis = 13;
+
+    public final static int pikis = 0;
+    public final static int ercs = 1;
+    public final static int karavs = 2;
+    public final static int kreicis = 3;
+
+    public Cards(int theValue, int theSuit) { // constructur
+        this.setTheValue(theValue);
+        this.setTheSuit(theSuit);
+    }
+
+    private Cards() {
+    }
+// add geters and seters by Refactor--> Encapsulation
+    public int getTheValue() {
+        return theValue;
+    }
+
+    public int getTheSuit() {
+        return theSuit;
+    }
+
+    public void setTheValue(int theValue) {
+        this.theValue = theValue;
+    }
+
+    public void setTheSuit(int theSuit) {
+        this.theSuit = theSuit;
+    }
+
+    String getTheValueName() { // kārts lieluma atgriežšana
+        if (getTheValue() == 1) return ("duzis");
+        else if (getTheValue() == 11) return ("kalps");
+        else if (getTheValue() == 12) return ("dama");
+        else if (getTheValue() == 13) return ("kungs");
+        else if (getTheValue() > 1 && getTheValue() < 11) return ("#" + getTheValue());
+        else return null;
+    }
+    String getTheSuitName() {
+        switch (this.getTheSuit()) { // zīmējuma atgriežšana. bez [break], jo visi gadijumi satur [return]
+            case (0):
+                return "pikis";
+            case (1):
+                return "ercs";
+            case (2):
+                return "karavs";
+            case (3):
+                return "kreicis";
+            default:
+                return null;
+        }
+
+        }
+
+    @Override // toString metode ir bez argumentiem un atgriež String tipu
+    public String toString() {
+        return "Cards{ "
+                + getTheSuitName()
+                + " "
+                + getTheValueName()
+                + " }";
+        // expected outcome: "pikis kungs" vai "karavs #2" 
+    }
+
+    @Override // equal metode vienādas kārts atrašanai. Cards klases objektus salīdzina pēc theValue un theSuit lauku vērtībām
+    public boolean equals(Object a){
+        if(this==a)
+            return true;
+        if (!(a instanceof Cards)) return false;
+        Cards cards = (Cards) a;
+        return getTheValue()==cards.getTheValue() && getTheSuit() == cards.getTheSuit();
+            }
+
+
+    @Override // salīdzināšana, ja theValue un theSuit ir vienāds atgriež 0, ja lielāks 1
+    public int compareTo(Cards other) {
+        if (this.getTheValue() == other.theValue && this.getTheSuit() == other.theSuit) return 0;
+        else if (this.getTheSuit() >= other.theSuit && this.getTheValue() > other.theValue) return 1;
+        else return -1;
+    }
+
+    public void getRandomCard(){
+        this.setTheSuit((int) (Math.random() *4)+0);
+        this.setTheValue((int) (Math.random() *13)+1);
+    }
+}
