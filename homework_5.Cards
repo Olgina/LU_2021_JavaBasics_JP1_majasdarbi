@@ -100,9 +100,4 @@ public class Cards implements Comparable<Cards> {
         else if (this.getTheSuit() >= other.theSuit && this.getTheValue() > other.theValue) return 1;
         else return -1;
     }
-
-    public void getRandomCard(){
-        this.setTheSuit((int) (Math.random() *4)+0);
-        this.setTheValue((int) (Math.random() *13)+1);
-    }
 }
