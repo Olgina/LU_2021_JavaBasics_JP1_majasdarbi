@@ -1,0 +1,27 @@
+package student_olga_vitolina.homework_5.cardsapp;
+
+import student_olga_vitolina.homework_5.Cards;
+
+public class CardsApp {
+
+    public static void main(String[] args) {
+    Cards a1 = new Cards(1,1);
+    Cards a2 = new Cards(1,1);
+    System.out.println("a1 == a2 ? "+ a1.equals(a2));
+    // izveido 2 vienādus Cards objektus (ar theSuit un theValue) un parbauda vai tie vienādi ar equals metodi
+        // // expected outcome true
+
+    Cards b1 = new Cards(1,1);
+    Cards b2 = new Cards(13,0);
+    System.out.println("b1 < b2 ? " + (b1.compareTo(b2)<0));
+    // izveido 2 dažādus Cards objektus (ar theSuit un theValue) un pārbauda kura kārts lielāka ar compareTo 
+        // expected outcome true
+
+    Cards c1 = new Cards (13,0);
+    Cards c2 = new Cards (2,2);
+    System.out.println("c1 = " + c1.getTheValue()+" "+ c1.getTheSuit());
+    System.out.println("c1= "+c1+"c2= "+c2);
+    // izdrukā kārts nosaukumu parādot kārts zīmējumu, skaitu.
+        // expected outcome: c1 = 13 0 un c1= Cards{ pikis kungs }c2= Cards{ karavs #2 }
+    }
+}
