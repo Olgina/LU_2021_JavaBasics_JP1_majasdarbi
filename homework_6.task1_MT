@@ -6,7 +6,7 @@ public class MultiplicationTable {
 public static void main(String[] args) {
     // izveido klases instanci (mt) vai objektu
     MultiplicationTable mt = new MultiplicationTable(); //  mt vienāds ar konstruktoru
-    int size = 11; // pirmā vērība 0 pēdējā 10
+    int size = 10; // pirmā vērtība 0 pēdējā 10, ja line 27 nepievieno +1 x un y vērtībai
     mt.printHeaders(size);
     for(int i=0;i<size;i=i+1){ // sākuma vērtība, beigu nosacījums,palielinājums
         mt.printDetails(size,i);
@@ -24,7 +24,7 @@ public static void main(String[] args) {
     void printDetails(int size,int row) {// uzdevumā String tips, bet tad rāda kļūdas paziņojumu "missing return statement"?
     String line = " ";
     for(int i=0; i<size; i=i+1){
-        line = line +calculate(i,row) +" | ";
+       line = line +calculate(i+1,row+1) +" | "; // +1 lai sāktos vērtības x un y ar 1, ne no nulles!
     }
         System.out.println(line);
 }
