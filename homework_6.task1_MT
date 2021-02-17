@@ -1,0 +1,34 @@
+package student_olga_vitolina.homework_6.task1;
+
+public class MultiplicationTable {
+
+// main metode, kas izsauc printHeaders() un printDetails()
+public static void main(String[] args) {
+    // izveido klases instanci (mt) vai objektu
+    MultiplicationTable mt = new MultiplicationTable(); //  mt vienāds ar konstruktoru
+    int size = 11; // pirmā vērība 0 pēdējā 10
+    mt.printHeaders(size);
+    for(int i=0;i<size;i=i+1){ // sākuma vērtība, beigu nosacījums,palielinājums
+        mt.printDetails(size,i);
+    } }
+// metode printHeaders, kas izdrukā virsrakstu rindu. Cikls for
+    void printHeaders (int size){
+        String line = "";
+        for (int i=0; i<size; i=i+2){
+            line = line +i + "  | ";
+        }
+        System.out.println(line);
+        System.out.println(" "); // izdrukā tukšu rindu
+    }
+// metode, kas atgriež teksta vērtību reizinājumiem. Cikls for
+    void printDetails(int size,int row) {// uzdevumā String tips, bet tad rāda kļūdas paziņojumu "missing return statement"?
+    String line = " ";
+    for(int i=0; i<size; i=i+1){
+        line = line +calculate(i,row) +" | ";
+    }
+        System.out.println(line);
+}
+    // metode calculate, kas aprēķina divu skaitļu reizinājumu (noslēpj metodi kā reizinām)
+    int calculate (int x, int y){
+        return x*y;} // var brīvi mainīt uz ko citu, piemēram + vai -
+}
