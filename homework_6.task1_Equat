@@ -1,0 +1,30 @@
+package student_olga_vitolina.homework_6.task1;
+
+public class BruteForceEquationSolver {
+    // mērķis atrisināt vienādojuma ar brute force metodi |(constant) = (one) * x + (two) * y + (three) * z
+    final int MAXsize = 25; // norāda uz iterāciju lielumu
+
+    public static void main(String[] args) {
+        BruteForceEquationSolver equtSol = new BruteForceEquationSolver(); // izveido jaunu klasi
+        System.out.println(equtSol.bruteForceEquationSolver(1,1,70, 71)); // izsauc jauno klasi, mainīgie lielumi kurus maina
+    }
+
+    String bruteForceEquationSolver(int one, int two, int three, int constant) {
+        // tris cikli for: kas ļauj atkārtot izteiksmi, palielinot vai samazinot un izvērtējot cikla skaitītāja vērtību
+        // for (inicializācija (skaitītāju vērtība); nosacījums; modifikācija (+ vai - skaitītāja vērtību) { izteiksmes, ko izpilda);}
+        for (int x = 0; x < MAXsize; x = x + 1)
+        {
+            for (int y = 0; y < MAXsize; y = y + 1)
+            {
+                for (int z = 0; z < MAXsize; z = z + 1)
+                {
+                    if (x * one + y * two + z * three == constant)
+                        return "Solved result @ x:" + x + " y:" + y + " z:" + z;
+                }
+            }
+        }
+        return "Failed";
+    }
+}
+
+// outcome expected: Solved result @ x:0 y:1 z:1
