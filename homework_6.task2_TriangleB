@@ -1,0 +1,37 @@
+package student_olga_vitolina.homework_6.task2;
+
+public class DrawTriangle {
+// uzzīmēt trīsstūri no zvaigznītēm
+    // String drawStars(int count){...}         metode atgriež String mainīgo, kurš satur count= zvaigznīšu skaitu
+    // void drawTriangleForLoop(int size){}     metode, kura izvada zvaigznītes (System.out.println), izmanto for ciklu trīsstūra zīmēšanai
+    // void drawTriangleWhileLoop(int size) {}  metode,kura izvada trijstūri, izmanto while ciklu trīsstūra zīmēšanai (System.out.println).
+    // main metodi un no tās izsaucam trīstūra zīmēšanas metodes.
+
+   String drawStars(int count){
+        String stars = "";
+        for(int i =0; i<count;i=i+1);{
+            stars += "* ";
+            return stars;}
+    }
+    void drawTriangleForLoop(int size){
+       for(int i =0; i<size; i=i+1){
+           for(int j=0; j<size-1;j=j+1){
+              System.out.println(drawStars(i));
+        }
+    }}
+    void drawTrianleWhileLoop(int size){
+        int i = 0;
+        while (i<size){
+            System.out.println(drawStars(size));
+            i=i+1;
+        }
+    }
+
+    public static void main(String[] args) {
+       DrawTriangle drawStars = new DrawTriangle();
+       int count = 3;
+        drawStars.drawTriangleForLoop(count);
+       System.out.println("nu trīs rindas izdrukā..BET ne trīsstūri:((");
+        drawStars.drawTrianleWhileLoop(count);
+       }
+    }
