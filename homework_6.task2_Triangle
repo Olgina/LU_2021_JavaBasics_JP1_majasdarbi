@@ -1,0 +1,29 @@
+package student_olga_vitolina.homework_6.task2;
+
+public class DrawTriangle {
+
+    public static void main(String[] args) {
+        DrawTriangle line = new DrawTriangle(); // izveido klases objektu
+        System.out.println(line.drowLine (10,"II")); // norada max vertibu cik zimet, norada ko zimet
+
+        DrawTriangle triangle = new DrawTriangle();
+        triangle.drowStars(10,"*");
+    }
+
+    //vienas rindas izvadisanai
+     private String drowLine(int maxValue, String drowing){ // nosaka max vertibu cik zime, nosaka, ko zimet
+        String stars = "";
+        for(int index = 0; index<maxValue; index++)
+            stars += drowing;  // += pieskaitīšanas operātors, ar kuru pie katras iterācijas pieskaita vienu zvaigzni klāt
+         return stars;
+        }
+
+    // triistura izvadisanai
+       private void drowStars(int maxValue, String drowing){
+          for(int outer = 1; outer<maxValue; outer= outer+1){ // ārējais cikls no 1 līdz norādītai max vērtībai
+              String stars = "";
+               for(int index= 0; index < outer; index++) {// iekšējais cikls no 0 līdz 1 (outer)
+               stars += drowing; }
+               System.out.println(stars);
+               }
+    }
