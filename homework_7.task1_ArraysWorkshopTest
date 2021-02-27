@@ -1,0 +1,50 @@
+package student_olga_vitolina.homework_7.Task1;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class ArraysWorkshopTest {
+
+    @Test
+    void min() {
+        ArraysWorkshop a = new ArraysWorkshop();
+        int[] arrayVal = new int[]{2,9,100,1};
+        int expectedResult = 1;
+        int acctualResult = a.min(arrayVal);
+        assertEquals(expectedResult,acctualResult,"must return min");
+    }
+
+    @Test
+    void find() {
+        ArraysWorkshop b = new ArraysWorkshop();
+        int[] arrayVal = new int[]{2,9,100,1};
+        int expectedResult = -1;
+        int acctualResult = b.find(arrayVal,3);
+        assertEquals(expectedResult,acctualResult,"number found");
+    }
+
+    @Test
+    void sumArray() {
+        ArraysWorkshop c = new ArraysWorkshop();
+        int[] arrayVal = {2,9,100,1};
+        int expectedResult = 112;
+        int acctualResult = c.sumArray(arrayVal);
+        assertEquals(expectedResult,acctualResult,"array sum");
+    }
+
+    @Test
+    void printArray() {
+        ArraysWorkshop d = new ArraysWorkshop();
+        int[] arrayVal ={2,9,100,1};
+        System.out.println(arrayVal);
+    }
+
+    @Test
+    void reverseArray() {
+        ArraysWorkshop e = new ArraysWorkshop();
+        int[] arrayVal= {2,9,100,1};
+        int[] expectedResult = {1,100,9,2};
+        int[] actualResult = e.reverseArray(arrayVal);
+        assertEquals(expectedResult,actualResult,"reverse print");
+    } }
