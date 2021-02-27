@@ -1,0 +1,51 @@
+package student_olga_vitolina.homework_7.Task1;
+
+public class ArraysWorkshop {
+    /**  metode (public, lai var notestēt), kas atgriež masīva mazākās vērtības elementu no veselu skaitļu masīva.
+     int min(int[] array){...}  */
+    public int min (int[] array) {
+        if (array.length == 0) return -1;
+        int minValue = array[0];
+        for (int a: array){
+            if (a<minValue) minValue=a;
+        }
+        return minValue;
+    }
+
+    /** metode, kas meklē pozīciju masīvā dotajai vērtībai, vai arī atgriež -1 ja tādu neatrod.
+    int find(int[] array, int value){...}   */
+    public int find (int[] array, int value){
+        for (int b = 0; b<array.length;b=b+1){
+            if (array[b] == value) return b;
+        }
+        return -1; // ja nekas nav atrasts atgriež -1
+    }
+
+    /**  metode, kas atgriež masīva elementu summu.
+     * int sumArray(int[] array){}    */
+    public int sumArray (int [] array){
+        int sum =0;
+        for (int c =0; c<array.length; c=c+1){
+            sum+=array[c];
+        }
+        return sum;
+    }
+
+    /** metode, kas izdrukā doto masīvu. Izdrukājam masīva indeksu kopā ar elementa vērtību.
+     void printArray(int[] array){} */
+    public void printArray(int[] array){
+        for (int d = 0; d<array.length; d=d+1){
+            System.out.println("["+d+"] "+array[d]);
+        } 
+    }
+    
+    /**  metode, kas atgriež jaunu masīvu ar elementiem pretējā secībā dotajam masīvam.
+     int[] reverseArray(int[] array) */
+    public int[] reverseArray(int[] array){
+        int [] arrayReverse = new int[array.length]; // izveido jaunu masīvu
+        for (int e=0; e<array.length; e=e+1){
+            arrayReverse[e] = array[array.length - 1 - e];
+        }
+        return arrayReverse;
+        }
+}
