@@ -1,0 +1,15 @@
+package student_olga_vitolina.homework_7.Task2;
+
+public class WeigthCategory {
+    public static final String[] WEIGHT_CATEGORY = {"Fly Weight","Super Fly Weight", "Bantam Weight", "Super Bantam Weight", "Feather Weight", "Super Feather Weight",
+            "Light Weight", "Super Light Weight", "Welter Weight", "Super Welter Weight", "Middle Weight", "Super Middle Weight", "Light Heavy Weight",
+            "Super Light Heavy Weight", "Cruiser Weight", "Super Cruiser Weight", "Heavy Weight", "Super Heavy Weight" };
+    public static int[] WEIGHT_INTERVAL = {0,112,115, 112, 115, 118, 122, 126, 130, 135, 140, 147, 154, 160, 167, 174, 183, 189, 198, 209  };
+
+    // izveidot metodi kura atgriež svaru kategorijas nosaukumu, ja dots svars (int skaitlis), implementācijai izmantot ciklu
+    public static String getWeightCategoryName(int weight){
+        for (int i=0; i<WEIGHT_INTERVAL.length; i=i+1) {
+            if (weight < WEIGHT_INTERVAL[i + 1]) return WEIGHT_CATEGORY[i];
+        }
+    return "Please insert weight >0!";}
+}
