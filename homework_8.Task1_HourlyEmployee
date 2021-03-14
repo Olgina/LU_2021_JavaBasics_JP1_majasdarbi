@@ -1,0 +1,30 @@
+package student_olga_vitolina.homework_8;
+
+public class HourlyEmployee extends Employee {
+    private double payRate;
+    private int hoursWorked;
+
+    public HourlyEmployee (String firstName, String lastName, String ssn, double payRate) {
+        super(firstName, lastName, ssn);
+        this.payRate = payRate;
+        this.hoursWorked = 0; // konstruktoru noinicializē uz 0
+    }
+    public void addHours (int hoursWorked) {this.hoursWorked += hoursWorked;}
+
+        // aizvietojam (override) metodi pay kura atgriež hoursWorked * payRate. Pēc metodes izpildes hoursWorked = 0.
+            @Override
+    public double pay() {
+        double payout = hoursWorked * payRate;
+        this.hoursWorked = 0; // var izsaukt vienreiz, kad izsaukts otreiz nerēķina
+        return payout;
+    }
+
+    // generate to.String
+    @Override
+    public String toString() {
+        return "HourlyEmployees{ " + getFirstName()+ " " + getLastName()+"; "+ getSsn()+
+                " payRate=" + payRate +
+                "; hoursWorked = "+ hoursWorked +
+                "} ";
+    }
+}
