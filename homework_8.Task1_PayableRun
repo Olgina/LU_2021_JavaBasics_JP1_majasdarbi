@@ -1,0 +1,24 @@
+package student_olga_vitolina.homework_8;
+
+public class PayableRun {
+    public static void main(String[] args) {
+       Payable[] payouts = new Payable[3];
+
+       payouts[0]=new Executive("Justs", "Ozols", "0021",1000);
+        ((Executive)payouts[0]).awardBonus(10);
+
+       payouts[1]=new HourlyEmployee("Maija", "Laba", "3325", 10);
+        ((HourlyEmployee)payouts[1]).addHours(10);
+
+       payouts[2]=new SalariedEmployee("Oto", "Koks", "9878", 1000);
+
+       // izdruka katram darbiniekam beigas kopejo izmaksu
+       for (Payable pay: payouts){
+           System.out.println(pay + "Paid out: " + pay.pay());
+       }
+
+    }}
+// Expected outcome:
+//    Executive{ Justs Ozols; 0021; fixed salary= 1000.0; bonus= 10.0} Paid out: 1010.0
+//        HourlyEmployees{ Maija Laba; 3325 payRate=10.0; hoursWorked = 10} Paid out: 100.0
+//        SalariedEmployee{ Oto Koks; 9878; weeklySalary= 1000.0} Paid out: 1000.0
