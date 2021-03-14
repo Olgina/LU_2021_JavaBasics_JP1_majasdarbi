@@ -1,0 +1,5 @@
+package student_olga_vitolina.homework_8;
+
+public interface Payable { // Payable = interfeiss
+    double pay(); //  metode pay bez argumentiem
+}
