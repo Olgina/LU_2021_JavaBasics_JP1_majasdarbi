@@ -1,0 +1,33 @@
+package student_olga_vitolina.homework_8;
+
+public class Executive extends Employee {
+    private double bonus;
+
+// izveido konstruktoru:
+    public Executive (String firstName, String lastName, String ssn, double salary) {
+        super (firstName,lastName,ssn, salary);
+        }
+
+    public void awardBonus (double bonus){
+        this.bonus += bonus;
+    }
+
+    public void setBonus(double bonus) {
+        this.bonus = bonus;
+    }
+
+
+    @Override
+    public double pay() {
+        double payed = getSalary() + bonus;
+        this.bonus =0; // Pēc metodes izpildes bonus = 0.
+        return payed;
+    }
+    @Override
+    public String toString() {
+        return "Executive{ " +getFirstName()+ " " + getLastName()+"; "+getSsn()+
+                "; fixed salary= "+getSalary()+
+                "; bonus= " + bonus +
+                "} ";
+    }
+}
