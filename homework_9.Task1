@@ -1,0 +1,46 @@
+package student_olga_vitolina.homework_9.Task1;
+
+import java.util.*;
+
+public class WordCount {
+    Map<String,Integer> wordCounts = new HashMap<>();
+
+    public void run(){
+        Scanner input = new Scanner(System.in);// teksta ievade konsolē
+        System.out.println("Type");
+
+        while(input.hasNextLine()){
+            System.out.println("Please enter line with words or type quit to exit");
+            String line=input.nextLine();
+            if(line.contains("quit"))break;
+            for(String word:line.split(" ")){
+                addWord(word,wordCounts);
+            }
+        }
+
+        for(String word: wordCounts.keySet()){
+            System.out.println(word+" = "+wordCounts.get(word)); // izdruka vardu lietosanas biezumu
+        }
+        List<String> wordList = new ArrayList<>();
+        wordList.addAll(wordCounts.keySet());
+        System.out.println("Word list: " +sortWordCountsAsSet(wordList)); // izdruka izmantoto vardu sarakstu
+        input.close();
+    }
+
+    public static void main(String[] args) {
+        new WordCount().run();
+    }
+    // addWord metodi izveido
+    public static void addWord (String word, Map<String, Integer> wordMap){
+        if(wordMap.containsKey(word)){
+            Integer wordCount = wordMap.get(word);
+            wordMap.put(word,wordCount + 1);}
+        else {wordMap.put(word,1);}
+    }
+
+    String sortWordCountsAsSet(List strList){
+        Set<String>wordSet= new HashSet<>();
+        wordSet.addAll(strList);
+        return wordSet.toString();
+    }
+}
