@@ -1,0 +1,51 @@
+package student_olga_vitolina.homework_8;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class EmployeeTest {
+
+    @Test
+    void pay() {}
+
+
+    static class ExecutiveTest {
+    @Test
+        void pay() {
+        Executive emp = new Executive("Vards", "Uzvards", " kods",1);
+        emp.awardBonus(1);
+        double actualResult= emp.pay();
+        double expectedResult = 2;
+        assertEquals(actualResult,expectedResult);
+        if (actualResult==expectedResult)
+            System.out.println("Executive test: well done:)");
+        }
+    }
+
+
+            static class HourlyEmployeeTest {
+    @Test
+        void pay() {
+            HourlyEmployee emp = new HourlyEmployee("Vards","Uzvards","kods",1);
+            emp.addHours(1);
+            double actualResult= emp.pay();
+            double expectedResult = 1;
+            assertEquals(actualResult,expectedResult);
+        if (actualResult==expectedResult)
+        System.out.println("HourlyEmloyee test: well done:)");
+       }
+    }
+
+    static class SalariedEmployeeTest {
+    @Test
+        void pay() {
+        SalariedEmployee emp = new SalariedEmployee("Vards", "Uzvards","kods",1);
+        double actualResult = emp.pay();
+        double expectedResult = 1;
+        assertEquals(actualResult,expectedResult);
+        if (actualResult==expectedResult)
+            System.out.println("SalariedEmployee test: well done:)");
+        }
+    }
+}}
