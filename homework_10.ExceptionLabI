@@ -1,0 +1,42 @@
+package student_olga_vitolina.homework_10.Task1;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class ExceptionLab {
+    public static void main(String[] args) {
+        ExceptionLab ii = new ExceptionLab();
+        ii.myMethod1();
+
+        Scanner scan = new Scanner(System.in);
+        int num = 0;
+        do { System.out.println("Enter a number between 1 and 10");
+            try {
+                num = scan.nextInt();
+                if (num <= 0 || num >= 10) {
+                    throw new ApplicationException("Validācijas kļūda, skaitlim jābūt intervālā 1 un 10");
+                }
+            } catch(ApplicationException i) {
+                i.printStackTrace();
+            }
+        }while (true);
+         
+    }
+    // myMethod2() tiek izsaukta no myMethod1() un myMethod3() tiek izsaukta no myMethod2()
+    void myMethod1() {
+        try {
+            myMethod2();
+        } catch (FileNotFoundException i) {
+            i.printStackTrace();
+        }
+    }
+
+    void myMethod2() throws FileNotFoundException {
+        myMethod3();
+    }
+
+    void myMethod3() throws FileNotFoundException {
+        File file = new File("filename.txt"); //  sintakses kļuda, jo netiek apstrādāts "checked" exception
+        Scanner sc = new Scanner(file);
+    }}
