@@ -1,0 +1,50 @@
+package student_olga_vitolina.homework_4;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class BoolExpressionsTestA {
+    BoolExpressions boolExpressions;
+
+    @BeforeEach
+    void setUp() {
+        boolExpressions = new BoolExpressions();
+    }
+
+    @Test
+    void testTest1() {
+        assertTrue(boolExpressions.test1(10));
+    }
+
+    @Test
+    void testTest2() {
+        assertTrue(boolExpressions.test2(1));
+    }
+
+    @Test
+    void testTest3() {
+    assertEquals("Even", boolExpressions.test3(10));
+    }
+
+    @Test
+    void testTest4() {
+        assertEquals("children", boolExpressions.test4(3));
+    }
+
+    @Test
+    void testTest5() {
+        assertTrue(boolExpressions.test5("Hello World!", 12));
+    }
+
+    @Test
+    void nameTest6() {
+        assertTrue(boolExpressions.test6("Hello World", "Hello World"));
+    }
+
+    @Test
+    void nameTest7() {
+        assertEquals(15, boolExpressions.test7(15,3));
+    }
+}
